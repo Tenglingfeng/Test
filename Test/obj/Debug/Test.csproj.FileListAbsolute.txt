@@ -1,0 +1,10 @@
+D:\Project\ZSZ\Test\bin\Debug\Test.exe.config
+D:\Project\ZSZ\Test\bin\Debug\Test.exe
+D:\Project\ZSZ\Test\bin\Debug\Test.pdb
+D:\Project\ZSZ\Test\bin\Debug\ZSZ.Common.dll
+D:\Project\ZSZ\Test\bin\Debug\ZSZ.Common.pdb
+D:\Project\ZSZ\Test\obj\Debug\Test.csprojAssemblyReference.cache
+D:\Project\ZSZ\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\Project\ZSZ\Test\obj\Debug\Test.csproj.CopyComplete
+D:\Project\ZSZ\Test\obj\Debug\Test.exe
+D:\Project\ZSZ\Test\obj\Debug\Test.pdb
