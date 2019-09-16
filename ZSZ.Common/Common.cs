@@ -4,29 +4,35 @@ using System.Net;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
+using CaptchaGen;
+using CodeCarvings.Piczard;
+using CodeCarvings.Piczard.Filters.Watermarks;
 
 namespace ZSZ.Common
-{
+{   
+    /// <summary>
+    /// 通用类
+    /// </summary>
     public static class Common
     {
         /// <summary>
         /// 生成16位MD5加密
         /// </summary>
-        /// <param name="str"></param>
+        /// <param name="str">字符串</param>
         /// <returns></returns>
         public static string Get16Md5Str(string str)
         {
             MD5CryptoServiceProvider md5Crypto = new MD5CryptoServiceProvider();
             byte[] b = Encoding.Default.GetBytes(str);
-            byte[] c= md5Crypto.ComputeHash(b);
-            string t2 = BitConverter.ToString(c,4,8);
+            byte[] c = md5Crypto.ComputeHash(b);
+            string t2 = BitConverter.ToString(c, 4, 8);
             t2 = t2.Replace("-", "");
             return t2;
         }
         /// <summary>
         ///  生成32位MD5加密
         /// </summary>
-        /// <param name="str"></param>
+        /// <param name="str">字符串</param>
         /// <returns></returns>
         public static string Get32Md5Str(string str)
         {
@@ -52,7 +58,7 @@ namespace ZSZ.Common
         /// <summary>
         /// 生成验证码
         /// </summary>
-        /// <param name="len"></param>
+        /// <param name="len">验证码长度</param>
         /// <returns></returns>
         public static string CreateVerifyCode(int len)
         {
@@ -78,7 +84,7 @@ namespace ZSZ.Common
         /// <param name="body"></param>
         /// <param name="formMail"></param>
         /// <param name="title"></param>
-        public static void SendEmail(string inMail,string body,string formMail,string title)
+        public static void SendEmail(string inMail, string body, string formMail, string title)
         {
             using (MailMessage mailMessage = new MailMessage())
             {
@@ -86,10 +92,64 @@ namespace ZSZ.Common
                 {
                     mailMessage.To.Add(inMail);
                     mailMessage.Body = body;
-                    mailMessage.From=new MailAddress(formMail);
+                    mailMessage.From = new MailAddress(formMail);
                     mailMessage.Subject = title;
                     smtpClient.Credentials = new NetworkCredential("704279465@qq.com", "nnojulkqjcbobfha");
                     smtpClient.Send(mailMessage);
+                }
+            }
+        }
+        /// <summary>
+        /// 生成缩略图 
+        /// install- Package CodeCarvings.Piczard
+        /// </summary>
+        /// <param name="path">原图路径</param>
+        /// <param name="path2">保存路径</param>
+        /// <param name="newName">缩略图名称</param>
+        public static void GetImagePro(string path, string path2,string newName)
+        {
+            ImageProcessingJob job = new ImageProcessingJob();
+            job.Filters.Add(new FixedResizeConstraint(200, 200));
+            job.SaveProcessedImageToFileSystem(path,path2+@"\"+ newName+".png");
+
+        }
+        /// <summary>
+        /// 生成带水印的图片
+        /// install- Package CodeCarvings.Piczard
+        /// </summary>
+        /// <param name="watermarkPath">水印图片路径</param>
+        /// <param name="alpha">透明度</param>
+        /// <param name="path">原图路径</param>
+        /// <param name="path2">保存路径</param>
+        /// <param name="newName">缩略图名称</param>
+        public static void GetWatermarkImage(string watermarkPath,int alpha, string path, string path2, string newName)
+        {
+            ImageWatermark imgWatermark = new ImageWatermark(watermarkPath);
+            imgWatermark.ContentAlignment = System.Drawing.ContentAlignment.BottomRight;
+            ImageProcessingJob job = new ImageProcessingJob();
+            job.Filters.Add(imgWatermark);
+            job.SaveProcessedImageToFileSystem(path,path2+@"\"+newName+".png");
+        }
+
+        /// <summary>
+        /// 生成验证码图片
+        /// install CaptchaGen
+        /// 扩展 GEETEST 拖动验证码 
+        /// </summary>
+        /// <param name="code">验证码</param>
+        /// <param name="height">高度</param>
+        /// <param name="width">宽度</param>
+        /// <param name="fontSize">字体大小</param>
+        /// <param name="distortion">扭曲程度</param>
+        /// <param name="savePath">保存路径</param>
+        /// <param name="newName">图片名字</param>
+        public static void GetCodeImage(string code,int height,int width,int fontSize,int distortion,string savePath,string newName)
+        {
+            using (MemoryStream ms = ImageFactory.GenerateImage(code, height, width, fontSize, distortion))
+            {
+                using (FileStream fs = File.OpenWrite(savePath+@"\"+newName+".jpg"))
+                {
+                    ms.CopyTo(fs);
                 }
             }
         }

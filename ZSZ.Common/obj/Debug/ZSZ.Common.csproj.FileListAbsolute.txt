@@ -4,3 +4,8 @@ D:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csprojAssemblyReference.cache
 D:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csproj.CoreCompileInputs.cache
 D:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.dll
 D:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.pdb
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\ZSZ.Common.dll.config
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\CodeCarvings.Piczard.dll
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\CodeCarvings.Piczard.xml
+D:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csproj.CopyComplete
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\CaptchaGen.dll

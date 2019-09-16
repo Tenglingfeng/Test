@@ -8,3 +8,9 @@ D:\Project\ZSZ\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
 D:\Project\ZSZ\Test\obj\Debug\Test.csproj.CopyComplete
 D:\Project\ZSZ\Test\obj\Debug\Test.exe
 D:\Project\ZSZ\Test\obj\Debug\Test.pdb
+D:\Project\ZSZ\Test\bin\Debug\CodeCarvings.Piczard.dll
+D:\Project\ZSZ\Test\bin\Debug\ZSZ.Common.dll.config
+D:\Project\ZSZ\Test\bin\Debug\CodeCarvings.Piczard.xml
+D:\Project\ZSZ\Test\bin\Debug\CaptchaGen.dll
+D:\Project\ZSZ\Test\bin\Debug\log4net.dll
+D:\Project\ZSZ\Test\bin\Debug\log4net.xml
