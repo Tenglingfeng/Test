@@ -1,0 +1,6 @@
+D:\Project\ZSZ\MyIBLL\bin\Debug\MyIBLL.dll
+D:\Project\ZSZ\MyIBLL\bin\Debug\MyIBLL.pdb
+D:\Project\ZSZ\MyIBLL\obj\Debug\MyIBLL.csprojAssemblyReference.cache
+D:\Project\ZSZ\MyIBLL\obj\Debug\MyIBLL.csproj.CoreCompileInputs.cache
+D:\Project\ZSZ\MyIBLL\obj\Debug\MyIBLL.dll
+D:\Project\ZSZ\MyIBLL\obj\Debug\MyIBLL.pdb

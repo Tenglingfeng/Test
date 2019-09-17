@@ -9,3 +9,12 @@ D:\Project\ZSZ\ZSZ.Common\bin\Debug\CodeCarvings.Piczard.dll
 D:\Project\ZSZ\ZSZ.Common\bin\Debug\CodeCarvings.Piczard.xml
 D:\Project\ZSZ\ZSZ.Common\obj\Debug\ZSZ.Common.csproj.CopyComplete
 D:\Project\ZSZ\ZSZ.Common\bin\Debug\CaptchaGen.dll
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\Common.Logging.Core.dll
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\Common.Logging.dll
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\Quartz.dll
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\Common.Logging.pdb
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\Common.Logging.xml
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\Common.Logging.Core.pdb
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\Common.Logging.Core.xml
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\Quartz.pdb
+D:\Project\ZSZ\ZSZ.Common\bin\Debug\Quartz.xml

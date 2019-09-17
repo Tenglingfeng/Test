@@ -1,0 +1,6 @@
+D:\Project\ZSZ\ZSZ.CommonMVC\bin\Debug\ZSZ.CommonMVC.dll
+D:\Project\ZSZ\ZSZ.CommonMVC\bin\Debug\ZSZ.CommonMVC.pdb
+D:\Project\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.csprojAssemblyReference.cache
+D:\Project\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.csproj.CoreCompileInputs.cache
+D:\Project\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.dll
+D:\Project\ZSZ\ZSZ.CommonMVC\obj\Debug\ZSZ.CommonMVC.pdb

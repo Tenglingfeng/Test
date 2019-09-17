@@ -1,0 +1,9 @@
+D:\Project\ZSZ\MyBllImpl\bin\Debug\MyBllImpl.dll
+D:\Project\ZSZ\MyBllImpl\bin\Debug\MyBllImpl.pdb
+D:\Project\ZSZ\MyBllImpl\bin\Debug\MyIBLL.dll
+D:\Project\ZSZ\MyBllImpl\bin\Debug\MyIBLL.pdb
+D:\Project\ZSZ\MyBllImpl\obj\Debug\MyBllImpl.csprojAssemblyReference.cache
+D:\Project\ZSZ\MyBllImpl\obj\Debug\MyBllImpl.csproj.CoreCompileInputs.cache
+D:\Project\ZSZ\MyBllImpl\obj\Debug\MyBllImpl.csproj.CopyComplete
+D:\Project\ZSZ\MyBllImpl\obj\Debug\MyBllImpl.dll
+D:\Project\ZSZ\MyBllImpl\obj\Debug\MyBllImpl.pdb
