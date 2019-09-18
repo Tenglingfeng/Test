@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net;
 using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using Autofac;
@@ -12,6 +15,8 @@ using Quartz;
 using Quartz.Impl;
 using Quartz.Spi;
 using ZSZ.Common;
+using ZSZ.CommonMVC;
+using Common = ZSZ.Common.Common;
 using IContainer = Autofac.IContainer;
 
 namespace Test
@@ -21,15 +26,39 @@ namespace Test
         static void Main(string[] args)
         {
 
-           
-            ContainerBuilder builder = new ContainerBuilder();
-            Assembly asm = Assembly.Load("MyBllImpl");
-            builder.RegisterAssemblyTypes(asm).AsImplementedInterfaces().PropertiesAutowired();
-            IContainer container = builder.Build();
-            var school = container.Resolve<ISchool>();
-            school.Fangxue();
-            Console.WriteLine("OK");
-            Console.ReadKey();
+
+
+
+            //string userName = "asdfg ";
+            //string appKey = "1a454cb7d2d3a3a0934dc3";
+            //string templateId = "123";
+            //string code = "QWEWQ";
+            //string phoneNum = "13333333333";
+
+            //SendMsg send = new SendMsg();
+            //send.UserName = userName;
+            //send.AppKey = appKey;
+
+            //var result = send.SendSms(templateId, code, phoneNum);
+            //Console.WriteLine(result.Code+","+result.Msg);
+            //Console.ReadKey();
+            //WebClient web = new WebClient();
+            //string url ="http://sms.rupeng.cn/SendSms.ashx?userName=" + Uri.EscapeDataString(userName) +
+            //                   "&appKey=" + Uri.EscapeDataString(appKey) + "&templateId=" +
+            //                   Uri.EscapeDataString(templateId) +
+            //                   "&code=" + Uri.EscapeDataString(code) + "&phoneNum=" + Uri.EscapeDataString(phoneNum);
+            //web.Encoding = Encoding.UTF8;
+            //string resp = web.DownloadString(url);
+            //Console.WriteLine(resp);
+            //Console.ReadKey();
+            //ContainerBuilder builder = new ContainerBuilder();
+            //Assembly asm = Assembly.Load("MyBllImpl");
+            //builder.RegisterAssemblyTypes(asm).AsImplementedInterfaces().PropertiesAutowired();
+            //IContainer container = builder.Build();
+            //var school = container.Resolve<ISchool>();
+            //school.Fangxue();
+            //Console.WriteLine("OK");
+            //Console.ReadKey();
             //var blls = container.Resolve<IEnumerable<IUserBll>>();
             //foreach (var bll in blls)
             //{

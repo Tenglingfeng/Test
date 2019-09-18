@@ -78,6 +78,10 @@
       <Project>{a7b24846-abca-4b98-9820-0c225431ed52}</Project>
       <Name>MyIBLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ZSZ.CommonMVC\ZSZ.CommonMVC.csproj">
+      <Project>{adcb9957-a666-4ccf-ad8a-7e0c3a20ccaa}</Project>
+      <Name>ZSZ.CommonMVC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ZSZ.Common\ZSZ.Common.csproj">
       <Project>{3668B4B4-5F3B-4C2A-843A-685148F1F33E}</Project>
       <Name>ZSZ.Common</Name>

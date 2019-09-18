@@ -31,6 +31,8 @@ namespace WebApplication1
             //把Autofac作为一个系统的容器,当MVC框架创建controller等对象的时候全都从它这里获取
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
+            ModelBinders.Binders.Add(typeof(string), new TrimToDbcModelBinder());
         }
     }
 }

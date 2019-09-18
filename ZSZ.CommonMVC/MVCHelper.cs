@@ -1,5 +1,5 @@
 ﻿using System.Text;
-using System.Web.ModelBinding;
+using System.Web.Mvc;
 
 namespace ZSZ.CommonMVC
 {
