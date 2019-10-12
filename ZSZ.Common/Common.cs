@@ -1,15 +1,15 @@
-﻿using System;
+﻿using CaptchaGen;
+using CodeCarvings.Piczard;
+using CodeCarvings.Piczard.Filters.Watermarks;
+using System;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
-using CaptchaGen;
-using CodeCarvings.Piczard;
-using CodeCarvings.Piczard.Filters.Watermarks;
 
 namespace ZSZ.Common
-{   
+{
     /// <summary>
     /// 通用类
     /// </summary>
@@ -29,6 +29,7 @@ namespace ZSZ.Common
             t2 = t2.Replace("-", "");
             return t2;
         }
+
         /// <summary>
         ///  生成32位MD5加密
         /// </summary>
@@ -45,6 +46,7 @@ namespace ZSZ.Common
             }
             return pwd;
         }
+
         /// <summary>
         /// 生成MD5流加密
         /// </summary>
@@ -55,6 +57,7 @@ namespace ZSZ.Common
             MD5 md5 = MD5.Create();
             return md5.ComputeHash(stream).ToString();
         }
+
         /// <summary>
         /// 生成验证码
         /// </summary>
@@ -77,6 +80,7 @@ namespace ZSZ.Common
             }
             return sb.ToString();
         }
+
         /// <summary>
         /// 通过QQ邮箱发送邮箱
         /// </summary>
@@ -99,20 +103,21 @@ namespace ZSZ.Common
                 }
             }
         }
+
         /// <summary>
-        /// 生成缩略图 
+        /// 生成缩略图
         /// install- Package CodeCarvings.Piczard
         /// </summary>
         /// <param name="path">原图路径</param>
         /// <param name="path2">保存路径</param>
         /// <param name="newName">缩略图名称</param>
-        public static void GetImagePro(string path, string path2,string newName)
+        public static void GetImagePro(string path, string path2, string newName)
         {
             ImageProcessingJob job = new ImageProcessingJob();
             job.Filters.Add(new FixedResizeConstraint(200, 200));
-            job.SaveProcessedImageToFileSystem(path,path2+@"\"+ newName+".png");
-
+            job.SaveProcessedImageToFileSystem(path, path2 + @"\" + newName + ".png");
         }
+
         /// <summary>
         /// 生成带水印的图片
         /// install- Package CodeCarvings.Piczard
@@ -122,19 +127,19 @@ namespace ZSZ.Common
         /// <param name="path">原图路径</param>
         /// <param name="path2">保存路径</param>
         /// <param name="newName">缩略图名称</param>
-        public static void GetWatermarkImage(string watermarkPath,int alpha, string path, string path2, string newName)
+        public static void GetWatermarkImage(string watermarkPath, int alpha, string path, string path2, string newName)
         {
             ImageWatermark imgWatermark = new ImageWatermark(watermarkPath);
             imgWatermark.ContentAlignment = System.Drawing.ContentAlignment.BottomRight;
             ImageProcessingJob job = new ImageProcessingJob();
             job.Filters.Add(imgWatermark);
-            job.SaveProcessedImageToFileSystem(path,path2+@"\"+newName+".png");
+            job.SaveProcessedImageToFileSystem(path, path2 + @"\" + newName + ".png");
         }
 
         /// <summary>
         /// 生成验证码图片
         /// install CaptchaGen
-        /// 扩展 GEETEST 拖动验证码 
+        /// 扩展 GEETEST 拖动验证码
         /// </summary>
         /// <param name="code">验证码</param>
         /// <param name="height">高度</param>
@@ -143,11 +148,11 @@ namespace ZSZ.Common
         /// <param name="distortion">扭曲程度</param>
         /// <param name="savePath">保存路径</param>
         /// <param name="newName">图片名字</param>
-        public static void GetCodeImage(string code,int height,int width,int fontSize,int distortion,string savePath,string newName)
+        public static void GetCodeImage(string code, int height, int width, int fontSize, int distortion, string savePath, string newName)
         {
             using (MemoryStream ms = ImageFactory.GenerateImage(code, height, width, fontSize, distortion))
             {
-                using (FileStream fs = File.OpenWrite(savePath+@"\"+newName+".jpg"))
+                using (FileStream fs = File.OpenWrite(savePath + @"\" + newName + ".jpg"))
                 {
                     ms.CopyTo(fs);
                 }

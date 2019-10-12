@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Mvc;
-using TestIService;
+﻿using TestIService;
 
 namespace TestService
 {
-    public class UserService:IUserService
+    public class UserService : IUserService
     {
         public bool CheckLogin(string username, string pwd)
         {

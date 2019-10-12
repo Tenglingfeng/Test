@@ -1,7 +1,7 @@
 ﻿namespace MyIBLL
 {
-   public  interface  ISchool
-   {
-       void Fangxue();
-   }
+    public interface ISchool
+    {
+        void Fangxue();
+    }
 }

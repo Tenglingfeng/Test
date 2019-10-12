@@ -8,12 +8,16 @@ namespace ZSZ.CommonMVC
     /// </summary>
     public static class MvcHelper
     {
+        /// <summary>
+        /// </summary>
+        /// <param name="modelState"></param>
+        /// <returns></returns>
         public static string GetValidMsg(ModelStateDictionary modelState)
         {
             StringBuilder sb = new StringBuilder();
             foreach (var key in modelState.Keys)
             {
-                if (modelState[key].Errors.Count<=0)
+                if (modelState[key].Errors.Count <= 0)
                 {
                     continue;
                 }

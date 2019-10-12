@@ -1,34 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Net;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using Autofac;
-using log4net;
-using MyIBLL;
-using Quartz;
-using Quartz.Impl;
-using Quartz.Spi;
-using ZSZ.Common;
-using ZSZ.CommonMVC;
-using Common = ZSZ.Common.Common;
-using IContainer = Autofac.IContainer;
-
-namespace Test
+﻿namespace Test
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-
-
-
-
             //string userName = "asdfg ";
             //string appKey = "1a454cb7d2d3a3a0934dc3";
             //string templateId = "123";

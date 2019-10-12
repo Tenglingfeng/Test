@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using TestIService;
+﻿using TestIService;
 
 namespace WebApplication1
 {
     public class Person
     {
-        public IUserService  UserService{ get; set; }
+        public IUserService UserService { get; set; }
 
         public bool SayHello()
         {
-           return UserService.CheckLogin("abc", "dasd");
+            return UserService.CheckLogin("abc", "dasd");
         }
     }
 }

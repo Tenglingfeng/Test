@@ -1,5 +1,4 @@
-﻿using System;
-using Calc;
+﻿using Calc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject1
@@ -10,7 +9,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.AreEqual(4,Class1.TestNum(1,2)); 
+            Assert.AreEqual(4, Class1.TestNum(1, 2));
         }
     }
 }

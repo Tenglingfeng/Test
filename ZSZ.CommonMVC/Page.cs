@@ -1,33 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ZSZ.CommonMVC
 {
-  public  class Page
+    public class Page
     {
         /// <summary>
         /// 总页数
         /// </summary>
         public int PageSize { get; set; }
+
         /// <summary>
         /// 总条数
         /// </summary>
         public int TotalCount { get; set; }
+
         /// <summary>
         /// 当前页的页码的样式名字
         /// </summary>
         public string CurrentPageClassName { get; set; }
+
         /// <summary>
         /// 显示出来页码的最多个数
         /// </summary>
         public int MaxPageCount { get; set; }
+
         /// <summary>
         /// 当前页的页码(从1开始算起始页)
         /// </summary>
         public int PageIndex { get; set; }
+
         /// <summary>
         /// 链接的格式,约定其中页码用{pn}占位符
         /// </summary>
@@ -47,7 +49,7 @@ namespace ZSZ.CommonMVC
 
             for (int i = startPageIndex; i < endPageIndex; i++)
             {
-                if (i==PageIndex)
+                if (i == PageIndex)
                 {
                     html.Append("<li class='").Append(CurrentPageClassName).Append("'>").Append(i).Append("</li>");
                 }
@@ -61,6 +63,5 @@ namespace ZSZ.CommonMVC
             html.Append("</ul>");
             return html.ToString();
         }
-
     }
 }

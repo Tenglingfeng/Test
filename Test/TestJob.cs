@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Quartz;
+﻿using Quartz;
+using System;
 
 namespace Test
 {
-    class TestJob:IJob
+    internal class TestJob : IJob
     {
         public void Execute(IJobExecutionContext context)
         {
